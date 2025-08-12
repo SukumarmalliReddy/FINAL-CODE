@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Food Fusion</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b2d6e0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-utensils"></i>
+      <span class="brand">Sharaf</span>
+
+    </div>
+    <div class="logo1">
+      <span class="brands">Foodies</span>
+    </div>
+    <div class="links">
+      <a href="index1.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="menu.html">MENU</a>
+      <div class="dropdown">
+        <button class="dropbtn">PAGES <span class="caret">▾</span></button>
+        <div class="dropdown-content">
+          <a href="#">Booking</a>
+          <a href="ourteam.html">Our Team</a>
+          <a href="testimonal.html">Testimonial</a>
+        </div>
+      </div>
+      <a href="contact.html">CONTACT</a>
+      <a href="menu.html" class="btn-cta">Order Online</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="text-block">
+        <div class="hero-heading">
+          <span class="enjoy">Enjoy</span>
+          <span class="our">our</span>
+        </div>
+        <div class="delicious">Delicious Meal</div>
+        <p>Sharaf Foodies makes tasty homemade food like biryanis, sweets, cakes and pickles. Our food is fresh,
+          clean, and full of flavor. Enjoy the taste of restaurant-style dishes made with home-style love!</p>
+        <a href="menu.html" class="hero-btn">Order Online</a>
+      </div>
+      <div class="image-block">
+        <img src="./hero.png" alt="Delicious food" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Us -->
+  <section class="about">
+    <div class="about-inner">
+      <div class="images-grid">
+        <div class="img-wrap img1">
+          <img src="./biryanis/biryanis.webp" alt="Large Top Left" loading="lazy" />
+        </div>
+        <div class="img-wrap img2">
+          <img src="./sweets/sweets.avif" alt="Medium Top Right" loading="lazy" />
+        </div>
+        <div class="img-wrap img3">
+          <img src="./Cakes/cakes.jpeg" alt="Medium Bottom Left" loading="lazy" />
+        </div>
+        <div class="img-wrap img4">
+          <img src="./pickles.jpg" alt="Large Bottom Right" loading="lazy" />
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="subtitle">About Us <span class="line"></span></div>
+        <h2>Welcome to <span class="highlight"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</span></h2>
+        <p>We cook every dish with care to make you feel at home. Order now and enjoy delicious food made just for you!
+        </p>
+        <p>We offer a wide range of items like spicy biryanis, soft cakes, tasty pickles,
+          and yummy sweets. Each item is made fresh with the best ingredients for a perfect homemade taste.</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-card">
+              <div class="number" data-target="15">0</div>
+              <div class="info">
+                <div class="label">Years of</div>
+                <div class="title">EXPERIENCE</div>
+              </div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-card">
+              <div class="number" data-target="10">0</div>
+              <div class="info">
+                <div class="label">Home</div>
+                <div class="title">MASTER CHEFS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <a href="#" class="read-more">READ MORE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-cards">
+      <div class="card">
+        <h5>Master Chefs</h5>
+        <p>Our master chefs cook every dish with expert care and love.
+          They bring out the best flavors in biryanis, cakes, pickles, and sweets.</p>
+      </div>
+      <div class="card">
+        <h5>Quality Food</h5>
+        <p>We use high-quality ingredients to make every dish fresh and tasty.
+          Your health and satisfaction are our top priority in every bite.</p>
+      </div>
+      <div class="card">
+        <h5>Online Order</h5>
+        <p>We deliver fresh, homemade food right to your doorstep.</p>
+      </div>
+      <div class="card">
+        <h5>24/7 Service</h5>
+        <p>Our customer service is friendly, quick, and always ready to help you.</p>
+      </div>
+    </div>
+  </section>
+  <script>
+    const counters = document.querySelectorAll('.number');
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const speed = 100; // smaller = faster
+      const increment = target / speed;
+
+      const updateCount = () => {
+        const current = +counter.innerText;
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  </script>
+
+  <!-----food menu----->
+  <section class="menu-section">
+    <div class="menu-heading">
+      <h5><i class="fas fa-book-open"></i> Food Menu</h5>
+      <h2><i class="fas fa-star"></i> Most Popular Items</h2>
+      <div class="menu-tabs">
+        <a class="tab-btn active" href="#biryanis-menu"><i class="fas fa-mug-hot"></i> Popular
+          <strong>Biryanis</strong></a>
+        <a class="tab-btn" href="#cakes-menu"><i class="fas fa-birthday-cake"></i> Special <strong>Cakes</strong></a>
+        <a class="tab-btn" href="#sweets-menu"><i class="fas fa-candy-cane"></i> Lovely <strong>Sweets</strong></a>
+      </div>
+    </div>
+
+    <!-- Biryanis Menu -->
+    <div class="menu-grid" id="biryanis-menu">
+      <div class="menu-item">
+        <img src="./biryanis/chicken birayani.jpg " alt="Chicken Biryani">
+        <div class="menu-content">
+          <h4><i class="fas fa-drumstick-bite"></i> Chicken Biryani</h4>
+          <p>Loaded with juicy chicken, rich spices, and full of mouthwatering flavor.</p>
+        </div>
+        <span class="price">₹115</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./biryanis/mutton biryani.avif" alt="Mutton Biryani">
+        <div class="menu-content">
+          <h4><i class="fas fa-drumstick-bite"></i> Mutton Biryani</h4>
+          <p>Taste the royal flavor of our mutton biryani, packed with juicy meat and rich spices.</p>
+        </div>
+        <span class="price">₹140</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./biryanis/hyderabad biryani.jpg" alt="Hyderabad Biryani">
+        <div class="menu-content">
+          <h4><i class="fas fa-pizza-slice"></i> Hyderabad Biryani</h4>
+          <p>Made with aromatic spices and tender meat.</p>
+        </div>
+        <span class="price">₹95</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./biryanis/prawn biryani .jpg" alt="Prawn Biryani">
+        <div class="menu-content">
+          <h4><i class="fas fa-fish"></i> Prawn Biryani</h4>
+          <p>Bursting with juicy prawns, fragrant rice, and delicious coastal spices.</p>
+        </div>
+        <span class="price">₹125</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./biryanis/panner biryani.jpeg" alt="Paneer Biryani">
+        <div class="menu-content">
+          <h4><i class="fas fa-bread-slice"></i> Paneer Biryani</h4>
+          <p>Filled with soft paneer cubes, aromatic spices, and flavorful basmati rice.</p>
+        </div>
+        <span class="price">₹80</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./biryanis/veg biryani.jpg" alt="Veg Biryani">
+        <div class="menu-content">
+          <h4><i class="fas fa-seedling"></i> Veg Biryani</h4>
+          <p>Mix of fresh vegetables, fragrant rice, and rich spices cooked to perfection.</p>
+        </div>
+        <span class="price">₹90</span>
+      </div>
+    </div>
+
+    <!-- Cakes Menu -->
+    <div class="menu-grid" id="cakes-menu">
+      <div class="menu-item">
+        <img src="./Cakes/chocolate cake.jpg" alt="Chocolate Cake">
+        <div class="menu-content">
+          <h4><i class="fas fa-birthday-cake"></i> Chocolate Cake</h4>
+          <p>Soft and rich chocolate cake baked fresh with love and premium ingredients.</p>
+        </div>
+        <span class="price">₹150</span>
+      </div>
+      <div class="menu-item">
+        <img src="./Cakes/Strawberry cake.jpg" alt="Strawberry Cake">
+        <div class="menu-content">
+          <h4><i class="fas fa-birthday-cake"></i> Strawberry Cake</h4>
+          <p>Sweet strawberry layers with rich cream and fresh fruit toppings.</p>
+        </div>
+        <span class="price">₹140</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./Cakes/butterscotch cake.jpg" alt="Butterscotch Cake">
+        <div class="menu-content">
+          <h4><i class="fas fa-birthday-cake"></i> Butterscotch Cake</h4>
+          <p>Buttery and crunchy with caramel richness in every bite.</p>
+        </div>
+        <span class="price">₹145</span>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="./Cakes/vanilla cake.webp" alt="Vanilla Cake">
+        <div class="menu-content">
+          <h4><i class="fas fa-birthday-cake"></i> Vanilla Cake</h4>
+          <p>Classic vanilla delight with smooth cream and fluffy layers.</p>
+        </div>
+        <span class="price">₹130</span>
+      </div>
+    </div>
+
+    <!-- Sweets Menu -->
+    <div class="menu-grid" id="sweets-menu">
+      <div class="menu-item">
+        <img src="./sweets/gulab jamun sweet.jpg" alt="Gulab Jamun">
+        <div class="menu-content">
+          <h4><i class="fas fa-candy-cane"></i> Gulab Jamun</h4>
+          <p>Soft and juicy, soaked in sugar syrup — a perfect sweet treat.</p>
+        </div>
+        <span class="price">₹60</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./sweets/kalakandha sweet.jpg" alt="Kalakandha">
+        <div class="menu-content">
+          <h4><i class="fas fa-candy-cane"></i>Kalakandha</h4>
+          <p>Delicate and delicious cashew sweets, a festive favorite.</p>
+        </div>
+        <span class="price">₹90</span>
+      </div>
+
+      <div class="menu-item">
+        <img src="./sweets/ladoo sweet.webp" alt="Ladoo">
+        <div class="menu-content">
+          <h4><i class="fas fa-candy-cane"></i> Ladoo</h4>
+          <p>Traditional Indian laddoos made with ghee and love.</p>
+        </div>
+        <span class="price">₹65</span>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="./sweets/rasagulla sweet.webp" alt="Rasgulla">
+        <div class="menu-content">
+          <h4><i class="fas fa-candy-cane"></i> Rasgulla</h4>
+          <p>Delicate, spongy, and perfectly sweet — a Bengali favorite!</p>
+        </div>
+        <span class="price">₹70</span>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- Tab Switching Script -->
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const menuSections = document.querySelectorAll(".menu-grid");
+
+    function showSection(id) {
+      menuSections.forEach(section => {
+        section.classList.remove("active");
+      });
+      const target = document.querySelector(id);
+      if (target) target.classList.add("active");
+    }
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent default anchor jump
+
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+
+        const targetId = this.getAttribute("href");
+        showSection(targetId);
+      });
+    });
+
+    // Show the default tab on load
+    showSection("#biryanis-menu");
+  </script>
+
+</body>
+
+</html>
+
+<section class="reservation-section">
+  <div class="reservation-container">
+    <div class="reservation-image">
+      <iframe src="https://www.youtube.com/embed/xPPLbEFbCAo" frameborder="0" allowfullscreen
+        style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+      <img src="./reservation.jpg" alt="Couple Dining" />
+
+    </div>
+    <div class="reservation-form-box">
+      <h5 class="reservation-subtitle">Reservation</h5>
+      <h2 class="reservation-title">Book A Table Online</h2>
+      <form class="reservation-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="datetime-local" placeholder="Date & Time" required />
+        <select>
+          <option>People 1</option>
+          <option>People 2</option>
+          <option>People 3</option>
+          <option>People 4</option>
+        </select>
+        <textarea placeholder="Special Request"></textarea>
+        <button type="submit">BOOK NOW</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="chefs-section">
+  <h5>Team Members</h5>
+  <h2>Our Master Chefs</h2>
+
+  <div class="chef-grid">
+    <!-- Chef 1 -->
+    <div class="chef-card">
+      <img src="mammakka.jpg" alt="Chef">
+      <h4>Revathi Kumari</h4>
+      <p>Organizer</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+
+
+
+    <!-- Chef 2 -->
+    <div class="chef-card">
+      <img src="chinnakka .jpg" alt="Chef">
+      <h4>Renuka</h4>
+      <p>Designer</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+
+    <!-- Chef 3 -->
+    <div class="chef-card">
+      <img src="Ludhiya Garu" alt="Chef">
+      <h4>Ludhiya</h4>
+      <p>Cook</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Chef 4 -->
+    <div class="chef-card">
+      <img src="Bharathi Garu" alt="Chef">
+      <h4>Bharathi</h4>
+      <p>Home Maker</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!----TESTIMONAL------>
+<section class="testimonial-section">
+  <div class="testimonial-heading">
+    <h4>Testimonial</h4>
+    <h2>Our Clients Say!!!</h2>
+  </div>
+
+  <div class="testimonial-wrapper">
+    <div class="testimonial-slider">
+      <div class="testimonial-card">
+        <p><i class="quote">“</i> Great experience, delicious food and amazing ambiance. Highly recommended!</p>
+        <div class="client">
+          <img src="icon1.jpg" alt="Client 1">
+          <div>
+            <h3>rakul preeth</h3>
+            <p>Entrepreneur</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p><i class="quote">“</i> Absolutely loved the desserts. Service was top-notch too!</p>
+        <div class="client">
+          <img src="icon2.webp" alt="Client 2">
+          <div>
+            <h3>Allu Arjun</h3>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p><i class="quote">“</i> The pasta was fresh and delicious. Will definitely come again.</p>
+        <div class="client">
+          <img src="icon3.jpg" alt="Client 3">
+          <div>
+            <h3>Ram Charan</h3>
+            <p>Photographer</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p><i class="quote">“</i> A perfect place for a family dinner. Cozy and classy.</p>
+        <div class="client">
+          <img src="icon4.jpg" alt="Client 4">
+          <div>
+            <h3>pooja</h3>
+            <p>Teacher</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p><i class="quote">“</i> Mouthwatering dishes and quick service. Kudos to the chefs!</p>
+        <div class="client">
+          <img src="icon5.jpg" alt="Client 5">
+          <div>
+            <h3>Roshan</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+      </div>
+      <!-- Cloned for loop effect -->
+      <div class="testimonial-card">
+        <p><i class="quote">“</i> Great experience, delicious food and amazing ambiance. Highly recommended!</p>
+        <div class="client">
+          <img src="icon1.jpg" alt="Client 1">
+          <div>
+            <h3>rakul</h3>
+            <p>Entrepreneur</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p><i class="quote">“</i> Absolutely loved the desserts. Service was top-notch too!</p>
+        <div class="client">
+          <img src="icon2.webp" alt="Client 2">
+          <div>
+            <h3>Allu Arjun</h3>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-dots">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</section>
+
+<!-----Footer ------>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</h2>
+      <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+    </div>
+
+    <!-- Text Link Buttons -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fa fa-map-marker-alt"></i>Ganapathi nagar, samalkot, 533440</p>
+      <p><i class="fa fa-phone-alt"></i> +91 8978734912</p>
+      <p><i class="fa fa-envelope"></i>Sharaffoodies@gmail.com</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+
+</html>
+
+
+

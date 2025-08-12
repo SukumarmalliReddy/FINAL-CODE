@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Fusion - Register</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b2d6e0.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),
+        url('Cook.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background-color: #1e2a38;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .navbar .brand {
+      font-weight: 700;
+    }
+
+    .navbar .logo1 .brands {
+      font-weight: 600;
+      color: orange;
+      margin-left: 5px;
+    }
+
+    .navbar .links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar .links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar .links a:hover {
+      color: orange;
+    }
+
+    .btn-cta {
+      background-color: orange;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .btn-cta:hover {
+      background-color: #e69500;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(0, 0, 0);
+      color: black;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Form container */
+    .form-container {
+      max-width: 400px;
+      background: white;
+      padding: 25px;
+      margin: 50px auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .form-container input:focus {
+      border-color: orange;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background: #ff4d4d;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .form-container button:hover {
+        background: #e04343; }
+    .small-link { color: #ff4d4d; text-decoration: none; font-size: 14px; };
+ 
+
+    .form-container a {
+      color: orange;
+      text-decoration: none;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div style="display: flex; align-items: center;">
+      <div class="logo">
+    <i class="fa-solid fa-utensils"></i> <span class="brand">Sharaf</span>
+</div>
+<div class="logo1">
+    <span class="brands">Foodies</span>
+</div>
+    </div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="menu.html">MENU</a>
+      <div class="dropdown">
+        <button class="dropbtn">PAGES <span class="caret">▾</span></button>
+        <div class="dropdown-content">
+          <a href="#">Booking</a>
+          <a href="ourteam.html">Our Team</a>
+          <a href="testimonal.html">Testimonial</a>
+        </div>
+      </div>
+      <a href="contact.html">CONTACT</a>
+      
+      <a href="login.html" class="btn-cta" style="margin-left: 10px;">Login</a>
+    </div>
+  </nav>
+
+  <!-- Register Form -->
+  <div class="form-container">
+    <h2>Register</h2>
+    <input id="name" placeholder="Name"><br>
+    <input id="email" placeholder="Email"><br>
+    <input id="password" placeholder="Password" type="password"><br>
+    <button onclick="sendOtp()">Send OTP</button>
+    <input id="otp" placeholder="Enter OTP"><br>
+    <button onclick="register()">Register</button>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const API = "http://localhost:5000";
+
+    async function sendOtp() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const res = await fetch(`${API}/send-otp`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password })
+      });
+      alert((await res.json()).msg);
+    }
+
+    async function register() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const otp = document.getElementById("otp").value;
+      const res = await fetch(`${API}/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password, otp })
+      });
+      const data = await res.json();
+      alert(data.msg);
+      if (data.msg === "User registered successfully") {
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+
+
+<!-----Footer ------>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</h2>
+      <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+    </div>
+
+    <!-- Text Link Buttons -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fa fa-map-marker-alt"></i>Ganapathi nagar, samalkot, 533440</p>
+      <p><i class="fa fa-phone-alt"></i> +91 8978734912</p>
+      <p><i class="fa fa-envelope"></i>Sharaffoodies@gmail.com</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+</body>
+
+</html>

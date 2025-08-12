@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"href="style.css">
+
+  
+   
+
+  <title>Food Fusion</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b2d6e0.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="brand">Sharaf</span>
+        
+      </div>
+      <div class="logo1">
+        <span class="brands">Foodies</span>
+      </div>
+      <div class="links">
+        <a href="index1.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="service.html">SERVICE</a>
+        <a href="menu.html">MENU</a>
+        <div class="dropdown">
+          <button class="dropbtn">PAGES <span class="caret">▾</span></button>
+          <div class="dropdown-content">
+            <a href="#">Booking</a>
+            <a href="ourteam.html">Our Team</a>
+            <a href="testimonal.html">Testimonial</a>
+          </div>
+        </div>
+        <a href="contact.html">CONTACT</a>
+        <li>
+    <a href="Cart.html">
+        <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+    </a>
+</li>
+
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <ul id="modal-prices"></ul>
+    <button id="modal-ok-btn">OK</button>
+  </div>
+</div>
+
+
+<!-- Food Menu -->
+  <section class="menu-section">
+    <div class="menu-heading">
+      <h5><i class="fas fa-book-open"></i> Food Menu</h5>
+      <h2><i class="fas fa-star"></i> Most Popular Items</h2>
+      <div class="menu-tabs">
+        <a class="tab-btn " href="menu.html"><i class="fas fa-drumstick-bite"></i> Popular <strong>Biryanis</strong></a>
+        <a class="tab-btn " href="Cakes.html"><i class="fas fa-birthday-cake"></i> Special <strong>Cakes</strong></a>
+        <a class="tab-btn " href="Sweets.html"><i class="fas fa-candy-cane"></i> Lovely <strong>Sweets</strong></a>
+        <a class="tab-btn active" href="pickles.html"><i class="fas fa-utensils"></i><strong>pickles</strong> Paradise</a>
+      </div>
+    </div>
+
+<div class="filter-section">
+  <input type="text" id="searchBar" placeholder="🔍 Search items...">
+</div>
+
+<div class="food-grid" id="Biryani-grid">
+ 
+  <!-- Chicken Pickle Bone -->
+<div class="food-card">
+    <img src="./pickles/Chicken bone.webp" alt="Chicken Pickle Bone">
+    <div class="food-info">
+      <h3>Chicken Pickle Bone</h3>
+      <p>Pickles, Spicy, Traditional</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹140 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹140 for 200g">200g - ₹140</li>
+          <li data-price="₹270 for 500g">500g - ₹270</li>
+          <li data-price="₹520 for 1kg">1kg - ₹520</li>
+          <li data-price="₹980 for 2kg">2kg - ₹980</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Chicken Pickle Boneless -->
+<div class="food-card">
+    <img src="./pickles/Chicken bone less pickel.webp" alt="Chicken Pickle Boneless">
+    <div class="food-info">
+      <h3>Chicken Pickle Boneless</h3>
+      <p>Pickles, Spicy, Tender</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹150 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹150 for 200g">200g - ₹150</li>
+          <li data-price="₹290 for 500g">500g - ₹290</li>
+          <li data-price="₹560 for 1kg">1kg - ₹560</li>
+          <li data-price="₹1050 for 2kg">2kg - ₹1050</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Gongura Chicken Boneless Pickle -->
+<div class="food-card">
+    <img src="./pickles/Gongura Chicken bone less.jpg" alt="Gongura Chicken Boneless Pickle">
+    <div class="food-info">
+      <h3>Gongura Chicken Boneless Pickle</h3>
+      <p>Pickles, Spicy, Sour</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹160 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹160 for 200g">200g - ₹160</li>
+          <li data-price="₹300 for 500g">500g - ₹300</li>
+          <li data-price="₹580 for 1kg">1kg - ₹580</li>
+          <li data-price="₹1100 for 2kg">2kg - ₹1100</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Fish Pickle -->
+<div class="food-card">
+    <img src="./pickles/FIsh pickle.webp" alt="Fish Pickle">
+    <div class="food-info">
+      <h3>Fish Pickle</h3>
+      <p>Pickles, Coastal, Spicy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹170 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹170 for 200g">200g - ₹170</li>
+          <li data-price="₹320 for 500g">500g - ₹320</li>
+          <li data-price="₹600 for 1kg">1kg - ₹600</li>
+          <li data-price="₹1150 for 2kg">2kg - ₹1150</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Mutton Pickle -->
+<div class="food-card">
+    <img src="./pickles/Mutton Pickle.jpeg" alt="Mutton Pickle">
+    <div class="food-info">
+      <h3>Mutton Pickle</h3>
+      <p>Pickles, Spicy, Rich</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹180 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹180 for 200g">200g - ₹180</li>
+          <li data-price="₹340 for 500g">500g - ₹340</li>
+          <li data-price="₹640 for 1kg">1kg - ₹640</li>
+          <li data-price="₹1220 for 2kg">2kg - ₹1220</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Prawn Pickle -->
+<div class="food-card">
+    <img src="./pickles/prawn pickle.jpeg" alt="Prawn Pickle">
+    <div class="food-info">
+      <h3>Prawn Pickle</h3>
+      <p>Pickles, Coastal, Zesty</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹190 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹190 for 200g">200g - ₹190</li>
+          <li data-price="₹360 for 500g">500g - ₹360</li>
+          <li data-price="₹680 for 1kg">1kg - ₹680</li>
+          <li data-price="₹1280 for 2kg">2kg - ₹1280</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Natukodi Chicken Pickle -->
+<div class="food-card">
+    <img src="./pickles/natukodi chicken pickle.webp" alt="Natukodi Chicken Pickle">
+    <div class="food-info">
+      <h3>Natukodi Chicken Pickle</h3>
+      <p>Pickles, Spicy, Authentic</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹200 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹200 for 200g">200g - ₹200</li>
+          <li data-price="₹380 for 500g">500g - ₹380</li>
+          <li data-price="₹720 for 1kg">1kg - ₹720</li>
+          <li data-price="₹1350 for 2kg">2kg - ₹1350</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Non Veg Combo -->
+<div class="food-card">
+    <img src="./pickles/non veg combo pickle.webp" alt="Non Veg Combo">
+    <div class="food-info">
+      <h3>Non Veg Combo (250g X 4pcs)</h3>
+      <p>Chicken, Mutton, Prawn, Fish</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹1200 for 1kg combo ▾</button>
+        <ul class="price-options">
+          <li data-price="₹1200 for 1kg combo">1kg Combo - ₹1200</li>
+          <li data-price="₹2200 for 2kg combo">2kg Combo - ₹2200</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Gongura Chicken Bone Pickle -->
+<div class="food-card">
+    <img src="./pickles/Gongura chicken bone.webp" alt="Gongura Chicken Bone Pickle">
+    <div class="food-info">
+      <h3>Gongura Chicken Bone Pickle</h3>
+      <p>Pickles, Spicy, Sour</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹170 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹170 for 200g">200g - ₹170</li>
+          <li data-price="₹320 for 500g">500g - ₹320</li>
+          <li data-price="₹600 for 1kg">1kg - ₹600</li>
+          <li data-price="₹1150 for 2kg">2kg - ₹1150</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Gongura Mutton Pickle -->
+<div class="food-card">
+    <img src="./pickles/gonura mutton pickle.webp" alt="Gongura Mutton Pickle">
+    <div class="food-info">
+      <h3>Gongura Mutton Pickle</h3>
+      <p>Pickles, Spicy, Rich</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹190 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹190 for 200g">200g - ₹190</li>
+          <li data-price="₹360 for 500g">500g - ₹360</li>
+          <li data-price="₹680 for 1kg">1kg - ₹680</li>
+          <li data-price="₹1280 for 2kg">2kg - ₹1280</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Gongura Prawn Pickle -->
+<div class="food-card">
+    <img src="./pickles/Gongura Prawn pickle.jpg" alt="Gongura Prawn Pickle">
+    <div class="food-info">
+      <h3>Gongura Prawn Pickle</h3>
+      <p>Pickles, Coastal, Sour</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹200 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹200 for 200g">200g - ₹200</li>
+          <li data-price="₹380 for 500g">500g - ₹380</li>
+          <li data-price="₹720 for 1kg">1kg - ₹720</li>
+          <li data-price="₹1350 for 2kg">2kg - ₹1350</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Mango Pickle / Avvakaya -->
+<div class="food-card">
+    <img src="./pickles/Mango pickle.webp" alt="Mango Pickle / Avvakaya">
+    <div class="food-info">
+      <h3>Mango Pickle / Avvakaya</h3>
+      <p>Pickles, Tangy, Spicy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹100 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹100 for 200g">200g - ₹100</li>
+          <li data-price="₹190 for 500g">500g - ₹190</li>
+          <li data-price="₹360 for 1kg">1kg - ₹360</li>
+          <li data-price="₹680 for 2kg">2kg - ₹680</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Usirikaya / Amla Pickle -->
+<div class="food-card">
+    <img src="./Pickles/usirikaya pickel.webp" alt="Usirikaya / Amla Pickle">
+    <div class="food-info">
+      <h3>Usirikaya / Amla Pickle</h3>
+      <p>Pickles, Tangy, Healthy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹110 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹110 for 200g">200g - ₹110</li>
+          <li data-price="₹200 for 500g">500g - ₹200</li>
+          <li data-price="₹380 for 1kg">1kg - ₹380</li>
+          <li data-price="₹720 for 2kg">2kg - ₹720</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Nimmakaya / Lemon Pickle -->
+<div class="food-card">
+    <img src="./pickles/Nimmakaya pickle.jpg" alt="Nimmakaya / Lemon Pickle">
+    <div class="food-info">
+      <h3>Nimmakaya / Lemon Pickle</h3>
+      <p>Pickles, Tangy, Spicy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹100 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹100 for 200g">200g - ₹100</li>
+          <li data-price="₹190 for 500g">500g - ₹190</li>
+          <li data-price="₹360 for 1kg">1kg - ₹360</li>
+          <li data-price="₹680 for 2kg">2kg - ₹680</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Ginger / Allam Pickle -->
+<div class="food-card">
+    <img src="./pickles/ginger pickle.webp" alt="Ginger / Allam Pickle">
+    <div class="food-info">
+      <h3>Ginger / Allam Pickle</h3>
+      <p>Pickles, Zesty, Tangy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹120 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹120 for 200g">200g - ₹120</li>
+          <li data-price="₹220 for 500g">500g - ₹220</li>
+          <li data-price="₹420 for 1kg">1kg - ₹420</li>
+          <li data-price="₹780 for 2kg">2kg - ₹780</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Gongura Pickle -->
+<div class="food-card">
+    <img src="./pickles/Gongura pickle.webp" alt="Gongura Pickle">
+    <div class="food-info">
+      <h3>Gongura Pickle</h3>
+      <p>Pickles, Spicy, Sour</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹110 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹110 for 200g">200g - ₹110</li>
+          <li data-price="₹200 for 500g">500g - ₹200</li>
+          <li data-price="₹380 for 1kg">1kg - ₹380</li>
+          <li data-price="₹720 for 2kg">2kg - ₹720</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Tomato Pickle -->
+<div class="food-card">
+    <img src="./pickles/Tomato pickle.jpg" alt="Tomato Pickle">
+    <div class="food-info">
+      <h3>Tomato Pickle</h3>
+      <p>Pickles, Tangy, Spicy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹90 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹90 for 200g">200g - ₹90</li>
+          <li data-price="₹170 for 500g">500g - ₹170</li>
+          <li data-price="₹320 for 1kg">1kg - ₹320</li>
+          <li data-price="₹600 for 2kg">2kg - ₹600</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Chilli / Pandu Mirapakaya Pickle -->
+<div class="food-card">
+    <img src="./pickles/pandu chilli mirapakaya.jpg" alt="Chilli / Pandu Mirapakaya Pickle">
+    <div class="food-info">
+      <h3>Chilli / Pandu Mirapakaya Pickle</h3>
+      <p>Pickles, Spicy, Bold</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹120 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹120 for 200g">200g - ₹120</li>
+          <li data-price="₹220 for 500g">500g - ₹220</li>
+          <li data-price="₹420 for 1kg">1kg - ₹420</li>
+          <li data-price="₹780 for 2kg">2kg - ₹780</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Chintakaya Tokku Pickle -->
+<div class="food-card">
+    <img src="./pickles/chinthakaya tokku pickle.jpeg" alt="Chintakaya Tokku Pickle">
+    <div class="food-info">
+      <h3>Chintakaya Tokku Pickle</h3>
+      <p>Pickles, Tangy, Spicy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹110 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹110 for 200g">200g - ₹110</li>
+          <li data-price="₹200 for 500g">500g - ₹200</li>
+          <li data-price="₹380 for 1kg">1kg - ₹380</li>
+          <li data-price="₹720 for 2kg">2kg - ₹720</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Munakaya / Drumstick Pickle -->
+<div class="food-card">
+    <img src="./pickles/drumstick pickle.webp" alt="Munakaya / Drumstick Pickle">
+    <div class="food-info">
+      <h3>Munakaya / Drumstick Pickle</h3>
+      <p>Pickles, Spicy, Homemade</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹130 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹130 for 200g">200g - ₹130</li>
+          <li data-price="₹250 for 500g">500g - ₹250</li>
+          <li data-price="₹480 for 1kg">1kg - ₹480</li>
+          <li data-price="₹900 for 2kg">2kg - ₹900</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Mushroom Pickle -->
+<div class="food-card">
+    <img src="./pickles/mushroom pickle.png" alt="Mushroom Pickle">
+    <div class="food-info">
+      <h3>Mushroom Pickle</h3>
+      <p>Pickles, Spicy, Unique</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹140 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹140 for 200g">200g - ₹140</li>
+          <li data-price="₹270 for 500g">500g - ₹270</li>
+          <li data-price="₹520 for 1kg">1kg - ₹520</li>
+          <li data-price="₹980 for 2kg">2kg - ₹980</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Cauliflower Pickle -->
+<div class="food-card">
+    <img src="./pickles/cauliflower pickel.webp" alt="Cauliflower Pickle">
+    <div class="food-info">
+      <h3>Cauliflower Pickle</h3>
+      <p>Pickles, Spicy, Crunchy</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹120 for 200g ▾</button>
+        <ul class="price-options">
+          <li data-price="₹120 for 200g">200g - ₹120</li>
+          <li data-price="₹220 for 500g">500g - ₹220</li>
+          <li data-price="₹420 for 1kg">1kg - ₹420</li>
+          <li data-price="₹780 for 2kg">2kg - ₹780</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Veg Combo -->
+<div class="food-card">
+    <img src="./pickles/veg combo.webp" alt="Veg Combo">
+    <div class="food-info">
+      <h3>Veg Combo (250g X 4pcs)</h3>
+      <p>Mango, Lemon, Tomato, Gongura</p>
+      <div class="price-dropdown">
+        <button class="price-btn">₹950 for 1kg combo ▾</button>
+        <ul class="price-options">
+          <li data-price="₹950 for 1kg combo">1kg Combo - ₹950</li>
+          <li data-price="₹1800 for 2kg combo">2kg Combo - ₹1800</li>
+        </ul>
+      </div>
+      <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+
+
+</div>
+</Header>
+
+<!------ js  ------>
+
+
+<script>
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Search functionality
+  document.getElementById('searchBar').addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.food-grid .food-card');
+    
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const description = card.querySelector('p').textContent.toLowerCase();
+      
+      if (title.includes(filter) || description.includes(filter)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+
+  // Initialize cart from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  updateCartCount();
+
+
+  // Add to cart button logic
+  document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const card = this.closest('.food-card');
+      const name = card.querySelector('h3').textContent.trim();
+      const category = card.querySelector('p').textContent.trim();
+      const selectedPrice = card.querySelector('.price-btn').textContent.trim();
+
+      const item = {
+        name,
+        category,
+        price: selectedPrice
+      };
+
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+
+      // Optional: success feedback
+      this.textContent = "✔ Added";
+      this.style.backgroundColor = "#2ecc71";
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-cart-plus"></i> Add to Cart';
+        this.style.backgroundColor = "#ff6600";
+      }, 1000);
+    });
+  });
+
+  function updateCartCount() {
+    document.getElementById('cart-count').textContent = cart.length;
+  }
+});
+
+
+
+
+
+
+// Modal elements
+const modal = document.getElementById('itemModal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalPrices = document.getElementById('modal-prices');
+const modalOkBtn = document.getElementById('modal-ok-btn');
+const closeBtn = document.querySelector('.close-btn');
+
+let currentPriceBtn = null; // store reference to the clicked price button
+
+// Open modal when price button is clicked
+document.querySelectorAll('.price-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.food-card');
+    currentPriceBtn = btn;
+
+    // Set modal content
+    modalImg.src = card.querySelector('img').src;
+    modalTitle.textContent = card.querySelector('h3').textContent;
+    modalDesc.textContent = card.querySelector('p').textContent;
+
+    // Populate prices
+    modalPrices.innerHTML = '';
+    card.querySelectorAll('.price-options li').forEach(li => {
+      const clone = li.cloneNode(true);
+      clone.addEventListener('click', () => {
+        document.querySelectorAll('#modal-prices li').forEach(el => el.style.background = '');
+        clone.style.background = '#ffe0b2';
+        currentPriceBtn.textContent = li.getAttribute('data-price');
+      });
+      modalPrices.appendChild(clone);
+    });
+
+    modal.style.display = 'block';
+  });
+});
+
+// Close modal
+closeBtn.onclick = () => modal.style.display = 'none';
+modalOkBtn.onclick = () => modal.style.display = 'none';
+
+// Close on outside click
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+};
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<!-----Footer ------>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</h2>
+      <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+    </div>
+
+    <!-- Text Link Buttons -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fa fa-map-marker-alt"></i>Ganapathi nagar, samalkot, 533440</p>
+      <p><i class="fa fa-phone-alt"></i> +91 8978734912</p>
+      <p><i class="fa fa-envelope"></i>Sharaffoodies@gmail.com</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

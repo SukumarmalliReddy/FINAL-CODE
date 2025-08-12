@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Fusion - Your Cart</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    button { padding: 4px 8px; margin: 2px; cursor: pointer; }
+    .cart-container { padding: 20px; }
+    .cart-actions { margin-top: 15px; }
+    .cart-actions button, .cart-actions a button { margin-right: 10px; }
+
+    .logo1{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: #ff9900;
+  text-transform: uppercase;
+  padding-right: 700px;
+  padding-top: 12px;}
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="brand">Sharaf</span>
+      </div>
+      <div class="logo1">
+        <span class="brands">Foodies</span>
+      </div>
+      <div class="links">
+        <a href="index1.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="service.html">SERVICE</a>
+        <a href="menu.html">MENU</a>
+        <div class="dropdown">
+          <button class="dropbtn">PAGES <span class="caret">▾</span></button>
+          <div class="dropdown-content">
+            <a href="#">Booking</a>
+            <a href="ourteam.html">Our Team</a>
+            <a href="testimonal.html">Testimonial</a>
+          </div>
+        </div>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <div class="cart-actions">
+      <button id="clear-cart">Clear Cart</button>
+      <a href="menu.html"><button>Add Items</button></a>
+      <button id="proceed-pay">Proceed to Pay</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      container.innerHTML = '';
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p>Your cart is empty.</p>';
+        return;
+      }
+
+      let html = '<table><tr><th>Item</th><th>Category</th><th>Price</th><th>Quantity</th><th>Actions</th></tr>';
+      cart.forEach((item, index) => {
+        html += `<tr>
+                  <td>${item.name}</td>
+                  <td>${item.category}</td>
+                  <td>${item.price}</td>
+                  <td>${item.quantity || 1}</td>
+                  <td>
+                    <button onclick="changeQuantity(${index}, 1)">+</button>
+                    <button onclick="changeQuantity(${index}, -1)">-</button>
+                    <button onclick="removeItem(${index})">Remove</button>
+                  </td>
+                 </tr>`;
+      });
+      html += '</table>';
+
+      container.innerHTML = html;
+    }
+
+    function changeQuantity(index, change) {
+      cart[index].quantity = (cart[index].quantity || 1) + change;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      saveCart();
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      saveCart();
+      renderCart();
+    }
+
+    document.getElementById('clear-cart').addEventListener('click', () => {
+      localStorage.removeItem('cart');
+      cart = [];
+      renderCart();
+    });
+
+    renderCart();
+  </script>
+
+
+
+
+<!-----Footer ------>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</h2>
+      <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+    </div>
+
+    <!-- Text Link Buttons -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fa fa-map-marker-alt"></i>Ganapathi nagar, samalkot, 533440</p>
+      <p><i class="fa fa-phone-alt"></i> +91 8978734912</p>
+      <p><i class="fa fa-envelope"></i>Sharaffoodies@gmail.com</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
+
+</body>
+</html>

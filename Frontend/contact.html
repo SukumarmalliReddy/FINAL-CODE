@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharaf Foodies - Contact Us</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+    }
+
+  
+
+    /* Contact Card Styles */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 80px);
+      padding: 20px;
+    }
+    .contact-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      max-width: 350px;
+      width: 100%;
+      text-align: center;
+      border-top: 5px solid #d35400;
+    }
+    .contact-card h2 {
+      color: #d35400;
+      margin-bottom: 15px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 12px 0;
+      color: #333;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .contact-item:hover {
+      color: #d35400;
+    }
+    .contact-item i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #d35400;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-utensils"></i>
+      <span class="brand">Sharaf</span>
+    </div>
+    <div class="logo1">
+      <span class="brands">Foodies</span>
+    </div>
+    <div class="links">
+      <a href="index1.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="service.html">SERVICE</a>
+      <a href="menu.html">MENU</a>
+      <div class="dropdown">
+        <button class="dropbtn">PAGES ▾</button>
+        <div class="dropdown-content">
+          <a href="#">Booking</a>
+          <a href="ourteam.html">Our Team</a>
+          <a href="testimonal.html">Testimonial</a>
+        </div>
+      </div>
+      <a href="contact.html">CONTACT</a>
+      <a href="menu.html" class="btn-cta">Order Online</a>
+    </div>
+  </nav>
+
+  <!-- Contact Card -->
+  <div class="contact-container">
+    <div class="contact-card">
+      <h2>Contact Us</h2>
+      <a href="tel:+911234567890" class="contact-item">
+        <i class="fas fa-phone"></i> +91 12345 67890
+      </a>
+      <a href="https://wa.me/911234567890" class="contact-item">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+      <a href="mailto:info@sharaffoodies.com" class="contact-item">
+        <i class="fas fa-envelope"></i> info@sharaffoodies.com
+      </a>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

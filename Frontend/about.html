@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+   <link rel="stylesheet" href="style.css"/>
+
+  <title>Food Fusion</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b2d6e0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="brand">Sharaf</span>
+        
+      </div>
+      <div class="logo1">
+        <span class="brands">Foodies</span>
+      </div>
+      <div class="links">
+        <a href="index1.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="service.html">SERVICE</a>
+        <a href="menu.html">MENU</a>
+        <div class="dropdown">
+          <button class="dropbtn">PAGES <span class="caret">▾</span></button>
+          <div class="dropdown-content">
+            <a href="#">Booking</a>
+            <a href="ourteam.html">Our Team</a>
+            <a href="testimonal.html">Testimonial</a>
+          </div>
+        </div>
+        <a href="contact.html">CONTACT</a>
+        <a href="menu.html" class="btn-cta">Order Online</a>
+      </div>
+    </nav>     
+
+
+
+     <section class="about">
+      <div class="about-inner">
+        <div class="images-grid">
+          <div class="img-wrap img1">
+            <img src="./biryanis/biryanis.webp" alt="Large Top Left" loading="lazy" />
+          </div>
+          <div class="img-wrap img2">
+            <img src="./sweets/sweets.avif" alt="Medium Top Right" loading="lazy" />
+          </div>
+          <div class="img-wrap img3">
+            <img src="./Cakes/cakes.jpeg" alt="Medium Bottom Left" loading="lazy" />
+          </div>
+          <div class="img-wrap img4">
+            <img src="./pickles.jpg" alt="Large Bottom Right" loading="lazy" />
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="subtitle">About Us <span class="line"></span></div>
+          <h2>Welcome to <span class="highlight"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</span></h2>
+          <p>We cook every dish with care to make you feel at home. Order now and enjoy delicious food made just for you!</p>
+          <p>We offer a wide range of items like spicy biryanis, soft cakes, tasty pickles, 
+            and yummy sweets. Each item is made fresh with the best ingredients for a perfect homemade taste.</p>
+<div class="stats">
+  <div class="stat">
+    <div class="stat-card">
+      <div class="number" data-target="15">0</div>
+      <div class="info">
+        <div class="label">Years of</div>
+        <div class="title">EXPERIENCE</div>
+      </div>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="stat-card">
+      <div class="number" data-target="10">0</div>
+      <div class="info">
+        <div class="label">Home</div>
+        <div class="title">MASTER CHEFS</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          <a href="#" class="read-more">READ MORE</a>
+        </div>
+      </div>
+    </section>
+
+
+    <script>
+  const counters = document.querySelectorAll('.number');
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const speed = 100; // smaller = faster
+    const increment = target / speed;
+
+    const updateCount = () => {
+      const current = +counter.innerText;
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCount, 30);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+</script>
+
+
+     
+<!-----Footer ------>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</h2>
+      <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+    </div>
+
+    <!-- Text Link Buttons -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fa fa-map-marker-alt"></i>Ganapathi nagar, samalkot, 533440</p>
+      <p><i class="fa fa-phone-alt"></i> +91 8978734912</p>
+      <p><i class="fa fa-envelope"></i>Sharaffoodies@gmail.com</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+  </div>
+</footer>
+</header>
+</body>
+</html>

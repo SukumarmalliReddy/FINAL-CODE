@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"href="style.css">
+
+  
+   
+
+  <title>Food Fusion</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b2d6e0.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="brand">Sharaf</span>
+        
+      </div>
+      <div class="logo1">
+        <span class="brands">Foodies</span>
+      </div>
+      <div class="links">
+        <a href="index1.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="service.html">SERVICE</a>
+        <a href="menu.html">MENU</a>
+        <div class="dropdown">
+          <button class="dropbtn">PAGES <span class="caret">▾</span></button>
+          <div class="dropdown-content">
+            <a href="#">Booking</a>
+            <a href="ourteam.html">Our Team</a>
+            <a href="testimonal.html">Testimonial</a>
+          </div>
+        </div>
+        <a href="contact.html">CONTACT</a>
+        <li>
+    <a href="Cart.html">
+        <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+    </a>
+</li>
+
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <ul id="modal-prices"></ul>
+    <button id="modal-ok-btn">OK</button>
+  </div>
+</div>
+
+
+<!-- Food Menu -->
+  <section class="menu-section">
+    <div class="menu-heading">
+      <h5><i class="fas fa-book-open"></i> Food Menu</h5>
+      <h2><i class="fas fa-star"></i> Most Popular Items</h2>
+      <div class="menu-tabs">
+         <a class="tab-btn " href="menu.html"><i class="fas fa-drumstick-bite"></i> Popular <strong>Biryanis</strong></a>
+        <a class="tab-btn active" href="Cakes.html"><i class="fas fa-birthday-cake"></i> Special <strong>Cakes</strong></a>
+        <a class="tab-btn " href="Sweets.html"><i class="fas fa-candy-cane"></i> Lovely <strong>Sweets</strong></a>
+       <a class="tab-btn" href="pickles.html"><i class="fas fa-utensils"></i><strong>pickle</strong> Paradise</a>
+      </div>
+    </div>
+
+<div class="filter-section">
+  <input type="text" id="searchBar" placeholder="🔍 Search items...">
+</div>
+
+
+
+<div class="food-grid" id="Biryani-grid">
+
+
+    
+<div class="food-card">
+  <img src="./Cakes/chocolate cake.jpg" alt="Chocolate Cake">
+  <div class="food-info">
+    <h3>Chocolate Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/vanilla cake.webp" alt="Vanilla Cake">
+  <div class="food-info">
+    <h3>Vanilla Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Strawberry cake.jpg" alt="Strawberry Cake">
+  <div class="food-info">
+    <h3>Strawberry Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/butterscotch cake.jpg" alt="Butterscotch Cake">
+  <div class="food-info">
+    <h3>Butterscotch Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+
+
+<!-- Normal Cakes -->
+<div class="food-card">
+  <img src="./Cakes/Black forest cake.webp" alt="Black Forest Cake">
+  <div class="food-info">
+    <h3>Black Forest Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Pine apple cake.webp" alt="Pineapple Cake">
+  <div class="food-info">
+    <h3>Pineapple Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/red velvet cake.jpg" alt="Red Velvet Cake">
+  <div class="food-info">
+    <h3>Red Velvet Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/coffee cake.jpeg" alt="Coffee Cake">
+  <div class="food-info">
+    <h3>Coffee Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/marble cake.jpg" alt="Marble Cake">
+  <div class="food-info">
+    <h3>Marble Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Lemon cake.jpg" alt="Lemon Cake">
+  <div class="food-info">
+    <h3>Lemon Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Honey cake.jpg" alt="Honey Cake">
+  <div class="food-info">
+    <h3>Honey Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Carrot cake.jpg" alt="Carrot Cake">
+  <div class="food-info">
+    <h3>Carrot Cake</h3>
+    <p>Bakery, Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Cooling Cakes -->
+<div class="food-card">
+  <img src="./Cakes/Fresh cream fruit cake.jpg" alt="Fresh Cream Fruit Cake">
+  <div class="food-info">
+    <h3>Fresh Cream Fruit Cake</h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Ice cream.jpeg" alt="Ice Cream Cake">
+  <div class="food-info">
+    <h3>Ice Cream Cake</h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Mousse cake.jpeg" alt="Mousse Cake">
+  <div class="food-info">
+    <h3>Mousse Cake </h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Cheese cake.webp" alt="Cheesecake ">
+  <div class="food-info">
+    <h3>Cheesecake </h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Tiramisu cake.webp" alt="Tiramisu Cake">
+  <div class="food-info">
+    <h3>Tiramisu Cake</h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Chocolate truffle cake.jpeg" alt="Chocolate Truffle Cold Cake">
+  <div class="food-info">
+    <h3>Chocolate Truffle Cold Cake</h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Whipped cream chilled cake.jpeg" alt="Whipped Cream Chilled Cake">
+  <div class="food-info">
+    <h3>Whipped Cream Chilled Cake</h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Oero cake.jpeg" alt="Oreo Cake">
+  <div class="food-info">
+    <h3>Oreo Cold Cake</h3>
+    <p>Bakery, Chilled Dessert</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+
+<!-- Eggless Cakes -->
+<div class="food-card">
+  <img src="./Cakes/Eggless Chocolate cake.jpg" alt="Eggless Chocolate Cake">
+  <div class="food-info">
+    <h3>Eggless Chocolate Cake</h3>
+    <p>Bakery, Eggless</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Eggless black forest cake.jpg" alt="Eggless Black Forest Cake">
+  <div class="food-info">
+    <h3>Eggless Black Forest Cake</h3>
+    <p>Bakery, Eggless</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Eggless pineapple cake.png" alt="Eggless Pineapple Cake">
+  <div class="food-info">
+    <h3>Eggless Pineapple Cake</h3>
+    <p>Bakery, Eggless</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Eggless Red velvet cake.webp" alt="Eggless Red Velvet Cake">
+  <div class="food-info">
+    <h3>Eggless Red Velvet Cake</h3>
+    <p>Bakery, Eggless</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Eggless butterscotch cake.jpeg" alt="Eggless Butterscotch Cake">
+  <div class="food-info">
+    <h3>Eggless Butterscotch Cake</h3>
+    <p>Bakery, Eggless</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Eggless Fresh Cream cake.webp" alt="Eggless Fresh Cream Cake">
+  <div class="food-info">
+    <h3>Eggless Fresh Cream Cake</h3>
+    <p>Bakery, Eggless</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Special Shape Cakes -->
+<div class="food-card">
+  <img src="./Cakes/Round cake.jpeg" alt="Round Cake">
+  <div class="food-info">
+    <h3>Round Cake</h3>
+    <p>Bakery, Custom Shape</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Heart shape cake.jpeg" alt="Heart-Shaped Cake">
+  <div class="food-info">
+    <h3>Heart-Shaped Cake</h3>
+    <p>Bakery, Custom Shape</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Step cake.avif" alt="Step Cake">
+  <div class="food-info">
+    <h3>Step/Tier Cake</h3>
+    <p>Bakery, Multi-Tier</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/square cake.webp" alt="Square Cake">
+  <div class="food-info">
+    <h3>Square Cake</h3>
+    <p>Bakery, Custom Shape</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Rectangle cake.webp" alt="Rectangle Cake">
+  <div class="food-info">
+    <h3>Rectangle Cake</h3>
+    <p>Bakery, Custom Shape</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Personalized Photo cake.jpeg" alt="Personalized Photo Cake">
+  <div class="food-info">
+    <h3>Personalized Photo Cake</h3>
+    <p>Bakery, Custom Design</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/Cartoon themed cake.jpg" alt="Cartoon-Themed Cake">
+  <div class="food-info">
+    <h3>Cartoon-Themed Cake</h3>
+    <p>Bakery, Custom Design</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+<div class="food-card">
+  <img src="./Cakes/barbie girl cake.png" alt="Barbie Doll Cake">
+  <div class="food-info">
+    <h3>Barbie Doll Cake</h3>
+    <p>Bakery, Custom Design</p>
+    <div class="price-dropdown">
+      <button class="price-btn">₹115 for one ▾</button>
+      <ul class="price-options">
+        <li data-price="₹115 for one">Small - ₹115</li>
+        <li data-price="₹220 for medium">Medium - ₹220</li>
+        <li data-price="₹420 for large">Large - ₹420</li>
+        <li data-price="₹600 special">Special - ₹600</li>
+      </ul>
+    </div>
+    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</div>
+
+
+</div>
+
+</Header>
+
+
+<!-------js ----->
+
+
+<script>
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Search functionality
+  document.getElementById('searchBar').addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.food-grid .food-card');
+    
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const description = card.querySelector('p').textContent.toLowerCase();
+      
+      if (title.includes(filter) || description.includes(filter)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+
+  // Initialize cart from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  updateCartCount();
+
+
+  // Add to cart button logic
+  document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const card = this.closest('.food-card');
+      const name = card.querySelector('h3').textContent.trim();
+      const category = card.querySelector('p').textContent.trim();
+      const selectedPrice = card.querySelector('.price-btn').textContent.trim();
+
+      const item = {
+        name,
+        category,
+        price: selectedPrice
+      };
+
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+
+      // Optional: success feedback
+      this.textContent = "✔ Added";
+      this.style.backgroundColor = "#2ecc71";
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-cart-plus"></i> Add to Cart';
+        this.style.backgroundColor = "#ff6600";
+      }, 1000);
+    });
+  });
+
+  function updateCartCount() {
+    document.getElementById('cart-count').textContent = cart.length;
+  }
+});
+
+
+
+
+
+
+// Modal elements
+const modal = document.getElementById('itemModal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalPrices = document.getElementById('modal-prices');
+const modalOkBtn = document.getElementById('modal-ok-btn');
+const closeBtn = document.querySelector('.close-btn');
+
+let currentPriceBtn = null; // store reference to the clicked price button
+
+// Open modal when price button is clicked
+document.querySelectorAll('.price-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.food-card');
+    currentPriceBtn = btn;
+
+    // Set modal content
+    modalImg.src = card.querySelector('img').src;
+    modalTitle.textContent = card.querySelector('h3').textContent;
+    modalDesc.textContent = card.querySelector('p').textContent;
+
+    // Populate prices
+    modalPrices.innerHTML = '';
+    card.querySelectorAll('.price-options li').forEach(li => {
+      const clone = li.cloneNode(true);
+      clone.addEventListener('click', () => {
+        document.querySelectorAll('#modal-prices li').forEach(el => el.style.background = '');
+        clone.style.background = '#ffe0b2';
+        currentPriceBtn.textContent = li.getAttribute('data-price');
+      });
+      modalPrices.appendChild(clone);
+    });
+
+    modal.style.display = 'block';
+  });
+});
+
+// Close modal
+closeBtn.onclick = () => modal.style.display = 'none';
+modalOkBtn.onclick = () => modal.style.display = 'none';
+
+// Close on outside click
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+};
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<!-----Footer ------>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</h2>
+      <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+    </div>
+
+    <!-- Text Link Buttons -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fa fa-map-marker-alt"></i>Ganapathi nagar, samalkot, 533440</p>
+      <p><i class="fa fa-phone-alt"></i> +91 8978734912</p>
+      <p><i class="fa fa-envelope"></i>Sharaffoodies@gmail.com</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

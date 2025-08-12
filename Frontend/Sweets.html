@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"href="style.css">
+
+  
+   
+
+  <title>Food Fusion</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b2d6e0.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="brand">Sharaf</span>
+        
+      </div>
+      <div class="logo1">
+        <span class="brands">Foodies</span>
+      </div>
+      <div class="links">
+        <a href="index1.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="service.html">SERVICE</a>
+        <a href="menu.html">MENU</a>
+        <div class="dropdown">
+          <button class="dropbtn">PAGES <span class="caret">▾</span></button>
+          <div class="dropdown-content">
+            <a href="#">Booking</a>
+            <a href="ourteam.html">Our Team</a>
+            <a href="testimonal.html">Testimonial</a>
+          </div>
+        </div>
+        <a href="contact.html">CONTACT</a>
+        <li>
+    <a href="Cart.html">
+        <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+    </a>
+</li>
+
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <ul id="modal-prices"></ul>
+    <button id="modal-ok-btn">OK</button>
+  </div>
+</div>
+
+
+<!-- Food Menu -->
+  <section class="menu-section">
+    <div class="menu-heading">
+      <h5><i class="fas fa-book-open"></i> Food Menu</h5>
+      <h2><i class="fas fa-star"></i> Most Popular Items</h2>
+      <div class="menu-tabs">
+        <a class="tab-btn " href="menu.html"><i class="fas fa-drumstick-bite"></i> Popular <strong>Biryanis</strong></a>
+        <a class="tab-btn " href="Cakes.html"><i class="fas fa-birthday-cake"></i> Special <strong>Cakes</strong></a>
+        <a class="tab-btn active" href="Sweets.html"><i class="fas fa-candy-cane"></i> Lovely <strong>Sweets</strong></a>
+       <a class="tab-btn" href="pickles.html"><i class="fas fa-utensils"></i><strong>pickle</strong> Paradise</a>
+      </div>
+    </div>
+
+<div class="filter-section">
+  <input type="text" id="searchBar" placeholder="🔍 Search items...">
+</div>
+
+
+
+<div class="food-grid" id="Biryani-grid">
+
+
+<!-- Sweets Section -->
+<div class="food-card">
+    <img src="./sweets/rasagulla sweet.webp" alt="Rasgulla">
+    <div class="food-info">
+        <h3>Rasgulla</h3>
+        <p>Bengali Sweet, Soft & Juicy</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹20 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹20 per piece">₹20 - 1 Piece</li>
+                <li data-price="₹100 for 6">₹100 - 6 Pieces</li>
+                <li data-price="₹200 for 12">₹200 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/gulab jamun sweet.jpg" alt="Gulab Jamun">
+    <div class="food-info">
+        <h3>Gulab Jamun</h3>
+        <p>Soft Fried Balls in Sugar Syrup</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹20 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹20 per piece">₹20 - 1 Piece</li>
+                <li data-price="₹100 for 6">₹100 - 6 Pieces</li>
+                <li data-price="₹200 for 12">₹200 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+<!-- Sweets Section -->
+
+<div class="food-card">
+    <img src="./sweets/ariselu.jpg" alt="Ariselu">
+    <div class="food-info">
+        <h3>Ariselu</h3>
+        <p>Traditional sweet made with rice flour and jaggery</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹250 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹250 per kg">₹250 - 1 Kg</li>
+                <li data-price="₹130 per 500g">₹130 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/sunnundalu.jpg" alt="Sunnundalu">
+    <div class="food-info">
+        <h3>Sunnundalu</h3>
+        <p>Urad dal and jaggery-based healthy sweet</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹160 per 500g">₹160 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/Kakinada khaja.webp" alt="Kakinada Kaja">
+    <div class="food-info">
+        <h3>Kakinada Kaja</h3>
+        <p>Crispy layered sweet from Andhra</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹280 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹280 per kg">₹280 - 1 Kg</li>
+                <li data-price="₹150 per 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/bandar laddu.webp" alt="Bandar Laddu">
+    <div class="food-info">
+        <h3>Bandar Laddu</h3>
+        <p>Popular Andhra sweet made with gram flour</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹270 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹270 per kg">₹270 - 1 Kg</li>
+                <li data-price="₹140 per 500g">₹140 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/bobbatulu.webp" alt="Bobbatlu">
+    <div class="food-info">
+        <h3>Bobbatlu</h3>
+        <p>Sweet flatbread stuffed with dal and jaggery</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹20 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹20 per piece">₹20 - 1 Piece</li>
+                <li data-price="₹200 for 12 pieces">₹200 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/pootharekulu.webp" alt="Pootharekulu">
+    <div class="food-info">
+        <h3>Pootharekulu</h3>
+        <p>Paper-like sweet layered with ghee and sugar/jaggery</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹15 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹15 per piece">₹15 - 1 Piece</li>
+                <li data-price="₹150 for 12 pieces">₹150 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+<!-- Badhusha -->
+<div class="food-card">
+    <img src="./sweets/badhusha.webp" alt="Badhusha">
+    <div class="food-info">
+        <h3>Badhusha</h3>
+        <p>Flaky, layered sweet with a mild sugar syrup coating</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹20 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹20 per piece">₹20 - 1 Piece</li>
+                <li data-price="₹200 for 12 pieces">₹200 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Boondi -->
+<div class="food-card">
+    <img src="./sweets/boondi.jpg" alt="Boondi">
+    <div class="food-info">
+        <h3>Boondi</h3>
+        <p>Sweet fried gram flour drops soaked in sugar syrup</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹150 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹150 per kg">₹150 - 1 Kg</li>
+                <li data-price="₹80 for 500g">₹80 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Boondi Laddu -->
+<div class="food-card">
+    <img src="./sweets/Boondhi Laddu.jpg" alt="Boondi Laddu">
+    <div class="food-info">
+        <h3>Boondi Laddu</h3>
+        <p>Delicious round laddus made from sweet boondi</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹15 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹15 per piece">₹15 - 1 Piece</li>
+                <li data-price="₹150 for 12 pieces">₹150 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Nuvvula Unda -->
+<div class="food-card">
+    <img src="./sweets/nuvvula laddu.jpg" alt="Nuvvula Unda">
+    <div class="food-info">
+        <h3>Nuvvula Unda</h3>
+        <p>Sesame seed laddus made with jaggery</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹10 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹10 per piece">₹10 - 1 Piece</li>
+                <li data-price="₹100 for 12 pieces">₹100 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Bellam Pootharekulu -->
+<div class="food-card">
+    <img src="./sweets/Bellam Pootharekulu.webp" alt="Bellam Pootharekulu">
+    <div class="food-info">
+        <h3>Bellam Pootharekulu</h3>
+        <p>Paper-like sweet layered with jaggery and ghee</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹15 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹15 per piece">₹15 - 1 Piece</li>
+                <li data-price="₹150 for 12 pieces">₹150 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Tapeswaram Madatha Kaja -->
+<div class="food-card">
+    <img src="./sweets/tapeswaram madatha khaja.jpg" alt="Tapeswaram Madatha Kaja">
+    <div class="food-info">
+        <h3>Tapeswaram Madatha Kaja</h3>
+        <p>Crispy layered sweet soaked in sugar syrup</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹20 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹20 per piece">₹20 - 1 Piece</li>
+                <li data-price="₹200 for 12 pieces">₹200 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+
+
+<!-- Gorumitilu (Murupolu) -->
+<div class="food-card">
+    <img src="./sweets/Gorimitilu.webp" alt="Gorumitilu">
+    <div class="food-info">
+        <h3>Gorumitilu (Murupolu)</h3>
+        <p>Crunchy and sweet coiled snacks made from flour</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹150 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹150 per kg">₹150 - 1 Kg</li>
+                <li data-price="₹80 for 500g">₹80 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Pakundalu -->
+<div class="food-card">
+    <img src="./sweets/pakundalu.avif" alt="Pakundalu">
+    <div class="food-info">
+        <h3>Pakundalu</h3>
+        <p>Sweet rice flour balls deep-fried till crisp</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹120 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹120 per kg">₹120 - 1 Kg</li>
+                <li data-price="₹60 for 500g">₹60 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Bellam Sunnundalu -->
+<div class="food-card">
+    <img src="./sweets/bellam sunnundalu.webp" alt="Bellam Sunnundalu">
+    <div class="food-info">
+        <h3>Bellam Sunnundalu</h3>
+        <p>Black gram laddus made with jaggery</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹10 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹10 per piece">₹10 - 1 Piece</li>
+                <li data-price="₹100 for 12 pieces">₹100 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Dry Fruit Pootharekulu -->
+<div class="food-card">
+    <img src="./sweets/dry fruit pootharekulu.webp" alt="Dry Fruit Pootharekulu">
+    <div class="food-info">
+        <h3>Dry Fruit Pootharekulu</h3>
+        <p>Paper-like sweet stuffed with dry fruits and sugar</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹25 per piece ▾</button>
+            <ul class="price-options">
+                <li data-price="₹25 per piece">₹25 - 1 Piece</li>
+                <li data-price="₹250 for 12 pieces">₹250 - 12 Pieces</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Kaju Pakkam -->
+<div class="food-card">
+    <img src="./sweets/kaju pakkam.webp" alt="Kaju Pakkam">
+    <div class="food-info">
+        <h3>Kaju Pakkam</h3>
+        <p>Crunchy cashew brittle made with sugar/jaggery</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- KhalaKhand Burfi -->
+<div class="food-card">
+    <img src="./sweets/kalakandha sweet.jpg" alt="KhalaKhand Burfi">
+    <div class="food-info">
+        <h3>KhalaKhand Burfi</h3>
+        <p>Milk-based burfi with rich and grainy texture</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹250 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹250 per kg">₹250 - 1 Kg</li>
+                <li data-price="₹125 for 500g">₹125 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<!-- Pala Khova -->
+<div class="food-card">
+    <img src="./sweets/pala khova.webp" alt="Pala Khova">
+    <div class="food-info">
+        <h3>Pala Khova</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/Janthukulu.jpg" alt="Janthukulu">
+    <div class="food-info">
+        <h3>Janthukulu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/bellam Boondi mixture.webp" alt="Boondhi bellam mixture">
+    <div class="food-info">
+        <h3>Boondhi bellam mixture</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+    </div>
+
+<div class="food-card">
+    <img src="./sweets/bellam govalu.jpg" alt="Bellam govalu ">
+    <div class="food-info">
+        <h3>Bellam Govalu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/Karam Poosa.jpg" alt="KaramPoosa">
+    <div class="food-info">
+        <h3>KaramPoosa</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/Kobari  Kajjikayalu.jpg" alt="kobari Kajjikayalu">
+    <div class="food-info">
+        <h3>Kobari Kajjikayalu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+
+<div class="food-card">
+    <img src="./sweets/Pala chellaguthulu.jpg" alt="pala Chellaguthulu">
+    <div class="food-info">
+        <h3>Pala Chellaguthulu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+
+
+<div class="food-card">
+    <img src="./sweets/chekodilu.jpg" alt="chekodilu">
+    <div class="food-info">
+        <h3>Chekodilu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+
+<div class="food-card">
+    <img src="./sweets/bhurulu.jpeg" alt="Bhurullu">
+    <div class="food-info">
+        <h3>Bhurullu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/palamunjalu.jpeg" alt="Palamunjalu">
+    <div class="food-info">
+        <h3>Palamunjalu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+    </div>
+
+<div class="food-card">
+    <img src="./sweets/ravva laddu.jpg" alt="Ravva Laddu">
+    <div class="food-info">
+        <h3>Ravva Laddu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+<div class="food-card">
+    <img src="./sweets/pogadalu.jpg" alt="Pogadalu">
+    <div class="food-info">
+        <h3>Pogadalu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+
+<div class="food-card">
+    <img src="./sweets/karam jidipappu.jpg" alt="karam jidipappu">
+    <div class="food-info">
+        <h3>Karam jidipappu</h3>
+        <p>Thickened milk sweet with rich creamy taste</p>
+        <div class="price-dropdown">
+            <button class="price-btn">₹300 per kg ▾</button>
+            <ul class="price-options">
+                <li data-price="₹300 per kg">₹300 - 1 Kg</li>
+                <li data-price="₹150 for 500g">₹150 - 500g</li>
+            </ul>
+        </div>
+        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</Header>
+
+
+<!-------js ----->
+
+
+<script>
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Search functionality
+  document.getElementById('searchBar').addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.food-grid .food-card');
+    
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const description = card.querySelector('p').textContent.toLowerCase();
+      
+      if (title.includes(filter) || description.includes(filter)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+
+  // Initialize cart from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  updateCartCount();
+
+
+  // Add to cart button logic
+  document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const card = this.closest('.food-card');
+      const name = card.querySelector('h3').textContent.trim();
+      const category = card.querySelector('p').textContent.trim();
+      const selectedPrice = card.querySelector('.price-btn').textContent.trim();
+
+      const item = {
+        name,
+        category,
+        price: selectedPrice
+      };
+
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+
+      // Optional: success feedback
+      this.textContent = "✔ Added";
+      this.style.backgroundColor = "#2ecc71";
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-cart-plus"></i> Add to Cart';
+        this.style.backgroundColor = "#ff6600";
+      }, 1000);
+    });
+  });
+
+  function updateCartCount() {
+    document.getElementById('cart-count').textContent = cart.length;
+  }
+});
+
+
+
+
+
+
+// Modal elements
+const modal = document.getElementById('itemModal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalPrices = document.getElementById('modal-prices');
+const modalOkBtn = document.getElementById('modal-ok-btn');
+const closeBtn = document.querySelector('.close-btn');
+
+let currentPriceBtn = null; // store reference to the clicked price button
+
+// Open modal when price button is clicked
+document.querySelectorAll('.price-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.food-card');
+    currentPriceBtn = btn;
+
+    // Set modal content
+    modalImg.src = card.querySelector('img').src;
+    modalTitle.textContent = card.querySelector('h3').textContent;
+    modalDesc.textContent = card.querySelector('p').textContent;
+
+    // Populate prices
+    modalPrices.innerHTML = '';
+    card.querySelectorAll('.price-options li').forEach(li => {
+      const clone = li.cloneNode(true);
+      clone.addEventListener('click', () => {
+        document.querySelectorAll('#modal-prices li').forEach(el => el.style.background = '');
+        clone.style.background = '#ffe0b2';
+        currentPriceBtn.textContent = li.getAttribute('data-price');
+      });
+      modalPrices.appendChild(clone);
+    });
+
+    modal.style.display = 'block';
+  });
+});
+
+// Close modal
+closeBtn.onclick = () => modal.style.display = 'none';
+modalOkBtn.onclick = () => modal.style.display = 'none';
+
+// Close on outside click
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+};
+
+
+
+
+
+
+
+
+</script>
+
+
+
+<!-----Footer ------>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i>Sharaf Foodies</h2>
+      <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+    </div>
+
+    <!-- Text Link Buttons -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-buttons">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fa fa-map-marker-alt"></i>Ganapathi nagar, samalkot, 533440</p>
+      <p><i class="fa fa-phone-alt"></i> +91 8978734912</p>
+      <p><i class="fa fa-envelope"></i>Sharaffoodies@gmail.com</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
