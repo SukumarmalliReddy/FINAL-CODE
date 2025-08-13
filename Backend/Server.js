@@ -25,7 +25,12 @@ app.use(
   })
 );
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+
+// Serve static files from public directory (including index.html)
+app.use(express.static(path.join(__dirname, "public"), {
+  extensions: ["html", "htm"],
+  index: "index.html"
+}));
 
 // Database Connection
 const connectDB = async () => {
@@ -74,8 +79,13 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Health Check Endpoint
+// Serve index.html for root route
 app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// Health Check Endpoint
+app.get("/api/status", (req, res) => {
   res.status(200).json({
     status: "OK",
     message: "OTP Authentication Service",
@@ -167,6 +177,14 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
+// Handle frontend routes - serve index.html for all non-API routes
+app.get("*", (req, res) => {
+  if (!req.path.startsWith("/api")) {
+    return res.sendFile(path.join(__dirname, "public", "index.html"));
+  }
+  next();
+});
+
 // Error Handling Middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -180,9 +198,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Not Found Handler
-app.use((req, res) => {
-  res.status(404).json({ success: false, message: "Endpoint not found" });
+// API Not Found Handler
+app.use("/api/*", (req, res) => {
+  res.status(404).json({ success: false, message: "API endpoint not found" });
 });
 
 // Server Initialization
