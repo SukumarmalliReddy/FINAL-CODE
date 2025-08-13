@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: otp-auth-backend
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: your_mongodb_uri
+      - key: EMAIL_USER
+        value: your_email@gmail.com
+      - key: EMAIL_PASS
+        value: your_app_password
+      - key: PORT
+        value: 5000

@@ -1,19 +1,17 @@
 {
-  "name": "auth-otp",
+  "name": "otp-auth-fullstack",
   "version": "1.0.0",
-  "description": "- Node.js 18+\r - MongoDB running locally or a MongoDB connection string",
-  "main": "index.js",
+  "description": "Backend for OTP authentication system",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Backend/server.js",
+    "build": "cd Backend && npm install --omit=dev",
+    "dev": "cd Backend && nodemon server.js"
+  },
+  "engines": {
+    "node": ">=18.x"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "mongoose": "^8.17.1"
-  }
+  "license": "ISC"
 }
