@@ -2,16 +2,25 @@
   "name": "otp-auth-fullstack",
   "version": "1.0.0",
   "description": "Backend for OTP authentication system",
-  "main": "server.js",
+  "main": "backend/server.js",
   "scripts": {
-    "start": "node Backend/server.js",
-    "build": "cd Backend && npm install --omit=dev",
-    "dev": "cd Backend && nodemon server.js"
+    "start": "node backend/server.js",
+    "build": "cd backend && npm install --omit=dev && npm run build",
+    "dev": "cd backend && nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "railway:build": "npm run build",
+    "railway:start": "npm start"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": ">=18.x",
+    "npm": ">=9.x"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "workspaces": [
+    "backend"
+  ]
 }
